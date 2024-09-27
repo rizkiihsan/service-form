@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Service Laptop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Formulir Service Laptop</h2>
+    <form action="/submit-service" method="POST">
+        <label for="nama">Nama Karyawan:</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="tanggal">Tanggal Service:</label>
+        <input type="date" id="tanggal" name="tanggal" required>
+
+        <label for="nomor-seri">Nomor Seri Laptop:</label>
+        <input type="text" id="nomor-seri" name="nomor-seri" required>
+
+        <label for="jenis-kerusakan">Jenis Kerusakan:</label>
+        <input type="text" id="jenis-kerusakan" name="jenis-kerusakan" required>
+
+        <label for="human-error">Indikasi Human Error:</label>
+        <select id="human-error" name="human-error" required>
+            <option value="Ya">Ya</option>
+            <option value="Tidak">Tidak</option>
+        </select>
+
+        <label for="deskripsi">Deskripsi Kerusakan:</label>
+        <textarea id="deskripsi" name="deskripsi" rows="4" required></textarea>
+
+        <label for="penjelasan">Penjelasan Kerusakan (Jika Human Error):</label>
+        <textarea id="penjelasan" name="penjelasan" rows="4"></textarea>
+
+        <label for="tindakan">Tindakan Perbaikan:</label>
+        <input type="text" id="tindakan" name="tindakan" required>
+
+        <label for="estimasi-waktu">Estimasi Waktu Perbaikan:</label>
+        <input type="text" id="estimasi-waktu" name="estimasi-waktu" required>
+
+        <label for="biaya">Biaya Perbaikan:</label>
+        <input type="number" id="biaya" name="biaya" required>
+
+        <label for="tanggal-selesai">Tanggal Selesai:</label>
+        <input type="date" id="tanggal-selesai" name="tanggal-selesai" required>
+
+        <button type="submit">Kirim Formulir</button>
+    </form>
+
+</body>
+</html>
